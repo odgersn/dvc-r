@@ -12,10 +12,16 @@ add <- function(path, repo = here::here(), git_commit = TRUE, git_message = "Add
   cmd <- glue::glue("dvc add {path}")
   system(cmd)
 
+  # Path to (anticipated) .dvc file
+  dvc_path <- glue::glue("{path}.dvc")
+
   ## Add file and commit
   if(git_commit) {
-    git2r::add(repo, glue::glue("{path}.xml.dvc"))
+    git2r::add(repo, dvc_path)
     git2r::add(repo, fs::path(fs::path_dir(path), ".gitignore"))
     git2r::commit(repo, git_message)
   }
+
+  # Return path to .dvc file
+  return(dvc_path)
 }
