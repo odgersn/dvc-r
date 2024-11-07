@@ -1,7 +1,7 @@
 Package: dvc
 Type: Package
 Title: Use Data Version Control (DVC) in R
-Version: 0.1.1.9000
+Version: 0.1.1.9001
 Authors@R: c(person("Andrew", "Stewart", , "andrew.c.stewart@gmail.com", role = c("aut", "cre")), person("Nathan", "Odgers", , "odgersn@landcareresearch.co.nz", role = "ctb"))
 Maintainer: Andrew Stewart <andrew.c.stewart@gmail.com>
 Description: This package provides a simple wrapper around Data Version Control (DVC).
